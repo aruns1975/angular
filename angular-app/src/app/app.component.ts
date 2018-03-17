@@ -23,4 +23,14 @@ export class AppComponent {
 class User{
   userName:String='';
   age:number;
+  address:Address=new Address();
+}
+
+class Address{
+  add1:String='';
+  add2:String='';
+  add3:String='';
+  area:String='';
+  city:String='';
+  country:String='';
 }
