@@ -1,0 +1,21 @@
+.card, .card-header, .card-body{
+    padding:1px;
+    font-size: 15px;
+}
+
+.card-header{
+    background:rgb(196, 196, 196);
+    
+}
+
+.close{
+    padding:2px;
+    float:right;
+    cursor:pointer;
+    font-size: 18px;
+}
+
+.close:hover{
+    background:red;
+    color:white;
+}

@@ -1,0 +1,38 @@
+<div class="container bg-info">
+  <div class="row">
+    <div class="col-3  border border-danger">
+      <form (submit)="onSubmit($event)">
+        <div class="form-group">
+          <label>{{user.userName}}--------{{user.age}}</label>
+        </div>
+        <div class="form-group">
+          <label for="userName">User Name :</label>
+          <input id="userName" [value]="user.userName" (input)="user.userName=$event.target.value" placeholder="User Name" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age :</label>
+          <input id="age" [value]="user.age" plaeholder="Age" (input)="user.age=$event.target.value" type="number" class="form-control">
+        </div>
+        <button class="btn btn-primary">Add!!!</button>
+      </form>
+    </div>
+    <div class="col-9  border border-danger">
+      <div>
+        <h3>List of Users</h3>
+        <div class="container">
+          <div class="row">
+            <div class="card border border-secondary" *ngFor="let user of users,let i=index">
+                <div class="card-header text-uppercase" >
+                    {{user.userName}} <div class="close" (click)="deleteCard(i)"> X</div>
+                  </div>
+                  <div class="card-body">
+                      Featured
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
