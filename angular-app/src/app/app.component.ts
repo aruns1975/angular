@@ -7,30 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   user:User=new User();
-  users:User[]=[];
+
   
   onSubmit(event:Event){
     event.preventDefault();
-    this.users.push(this.user);
     this.user=new User();
   }
-  deleteCard(index){
-    this.users.splice(index,1);
-  }
-
 }
 
 class User{
   userName:String='';
   age:number;
-  address:Address=new Address();
-}
-
-class Address{
-  add1:String='';
-  add2:String='';
-  add3:String='';
-  area:String='';
-  city:String='';
-  country:String='';
 }
