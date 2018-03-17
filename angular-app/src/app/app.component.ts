@@ -9,6 +9,7 @@ export class AppComponent {
   user:User=new User();
   users:User[]=[];
   countries:String[]=[];
+  genders:String[]=['Male','Female'];
 
   constructor(){
     this.countries.push('India');
@@ -20,6 +21,13 @@ export class AppComponent {
     this.countries.push('Russia');
     this.countries.push('The Netherlands');
     this.countries.push('Belgium');
+  }
+  getBorder(user:User){
+    console.log(user);
+    if(user.gender==='Female'){
+      return "#FF69B4";
+    }
+    return "#80acf2";
   }
   
   onSubmit(event:Event){
@@ -36,6 +44,7 @@ export class AppComponent {
 class User{
   userName:String='';
   age:number;
+  gender:String='';
   address:Address=new Address();
 }
 

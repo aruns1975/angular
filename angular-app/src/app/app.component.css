@@ -1,3 +1,4 @@
+
 .card, .card-header, .card-body{
     padding:1px;
     font-size: 15px;
@@ -11,13 +12,15 @@ label,.form-group{
     padding:0px;
     margin:0px;
 }
+.form-control{
+    padding:1px;
+}
 .address{
     margin-top: 5px;
     padding:5px;
 }
 .card-header{
     background:rgb(196, 196, 196);
-    
 }
 
 .close{
@@ -31,4 +34,8 @@ label,.form-group{
     background:red;
     color:white;
     border-radius:50%
+}
+
+.male:hover{
+    background:rgb(92, 92, 211);
 }
