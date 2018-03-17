@@ -3,6 +3,10 @@
     font-size: 15px;
 }
 
+.card-body:hover{
+    background:rgb(226, 226, 226);
+}
+
 label,.form-group{
     padding:0px;
     margin:0px;
@@ -26,4 +30,5 @@ label,.form-group{
 .close:hover{
     background:red;
     color:white;
+    border-radius:50%
 }
