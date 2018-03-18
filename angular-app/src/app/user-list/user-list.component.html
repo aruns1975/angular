@@ -10,6 +10,8 @@
               {{user.userName}}  <div class="close" (click)="deleteCard(i)" [ngClass]="{male:user.gender==='Male'}"> x</div>
           </div>
           <div class="card-body">
+            <div *ngIf="user.age">Age - {{user.age}}</div>
+            <div *ngIf="user.age"><hr></div>
             <div>{{user.address.add1}}</div>
             <div>{{user.address.add2}}</div>
             <div>{{user.address.add3}}</div>
