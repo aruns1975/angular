@@ -1,0 +1,45 @@
+<form (submit)="onSubmit($event)">
+    <div class="form-group">
+      <label for="userName">User Name :</label>
+      <input id="userName" [value]="user.userName" (input)="user.userName=$event.target.value" placeholder="User Name" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age :</label>
+      <input id="age" [(ngModel)]="user.age" name="age" type="number" class="form-control">
+    </div>
+    <div  class="form-group cancel-float">
+      <div style="float:left" *ngFor="let gender of genders">
+          <input type=radio name="gender" (click)="user.gender=$event.target.value" [value]="gender">{{gender}}
+      </div>
+    </div>
+    <div class="form-group border border-danger address">
+      <div class="form-group">
+          <label for="add1">Address 1 :</label>
+          <input id="add1" [value]="user.address.add1" placeholder="Address 1" (input)="user.address.add1=$event.target.value"  class="form-control">    
+      </div>
+      <div class="form-group">
+          <label for="add2">Address 2 :</label>
+          <input id="add2" [value]="user.address.add2" placeholder="Address 2" (input)="user.address.add2=$event.target.value"  class="form-control">    
+      </div>
+      <div class="form-group">
+          <label for="add3">Address 3 :</label>
+          <input id="add3" [value]="user.address.add3" placeholder="Address 3" (input)="user.address.add3=$event.target.value"  class="form-control">    
+      </div>
+      <div class="form-group">
+          <label for="area">Area :</label>
+          <input id="area" [value]="user.address.area" placeholder="Area" (input)="user.address.area=$event.target.value"  class="form-control">    
+      </div>
+      <div class="form-group">
+          <label for="city">City :</label>
+          <input id="city" [value]="user.address.city" placeholder="City" (input)="user.address.city=$event.target.value"  class="form-control">    
+      </div>
+      <div class="form-group">
+          <label for="country">Country :</label>
+          <select id="country" name="country" ngModel (change)="user.address.country=$event.target.value" class="form-control">
+            <option *ngFor="let country of countries;let i=index" [value]="country">{{country}}</option>
+          </select>
+              
+      </div>          
+    </div>
+    <button class="btn btn-primary">Add!!!</button>
+  </form>

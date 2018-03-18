@@ -23,7 +23,6 @@
         "styles.css"
       ],
       "scripts": [
-        "fontawesome-all.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
