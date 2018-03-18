@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { NgForm,NgModel } from '@angular/forms';
 
-import { User, Address, EditModeEventData, UserBuilder } from '../models/user.model';
+import { User, Address, EditModeEventData, UserBuilder } from '../../models/user.model';
 
-import { UserService } from '../services/user.service';
-import { DomainService } from '../services/domain.service';
+import { UserService } from '../../services/user.service';
+import { DomainService } from '../../services/domain.service';
 
 @Component({
     selector: 'app-user-edit',
