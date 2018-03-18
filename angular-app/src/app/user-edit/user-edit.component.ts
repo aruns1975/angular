@@ -26,7 +26,10 @@ export class UserEditComponent{
             this.previousUser=UserBuilder.cloneUser(editData.user);
             this.editIndex=editData.index;
             this.isEditMode=true;
-        })
+        });
+        this.userService.userListChangeEvent.subscribe((event:String)=>{
+            this.cancelEditMode();
+        });
     }
 
     onSubmit(event:Event){
