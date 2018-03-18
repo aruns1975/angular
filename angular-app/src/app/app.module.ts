@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { UserEditComponent} from './user-edit/user-edit.component'
+import { UserEditComponent} from './user-edit/user-edit.component';
+
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { UserEditComponent} from './user-edit/user-edit.component'
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
