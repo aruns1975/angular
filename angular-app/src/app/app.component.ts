@@ -21,14 +21,6 @@ export class AppComponent {
   deleteCard(index){
     this.users.splice(index,1);
   }
-
-  editUser(user:User){
-
-  }
-
-
-
-
 }
 
 
