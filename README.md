@@ -1,1 +1,1 @@
-# angular
+React JS Components internal examples
